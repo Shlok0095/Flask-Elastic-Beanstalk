@@ -9,7 +9,7 @@ test:
 	python3 -m pytest test_application.py
 
 deploy:
-	eb use flask-demo-environment
-	eb flask-duke-cd-env
+	eb use flask-duke-cd-env
+	eb deploy
 
 all: install lint test
