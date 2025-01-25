@@ -31,11 +31,17 @@ def calculate():
         elif operation == 'multiply':
             result = num1 * num2
         elif operation == 'divide':
-            result = num1 / num2 if num2 != 0 else "Error: Division by zero"
+            if num2 == 0:
+                return jsonify({'error': 'Division by zero is not allowed'})
+            result = num1 / num2
+        else:
+            return jsonify({'error': 'Invalid operation'})
         
         return jsonify({'result': result})
-    except Exception as e:
-        return jsonify({'error': str(e)})
+    except ValueError:
+        return jsonify({'error': 'Invalid number input'})
+    except KeyError:
+        return jsonify({'error': 'Missing input parameters'})
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0', port=8080)
