@@ -1,0 +1,9 @@
+deploy:
+  artifact: .
+platform: Python 3.9
+branch-defaults:
+  default:
+    environment: flask-duke-cd-env
+global:
+  application_name: flask-duke-demo
+  default_region: us-east-1
