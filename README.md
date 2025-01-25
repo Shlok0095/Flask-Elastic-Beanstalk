@@ -1,0 +1,2 @@
+# Flask-Elastic-beanstalk
+beanstalk
