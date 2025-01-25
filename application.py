@@ -5,12 +5,7 @@ application = Flask(__name__)
 
 # Sample quotes for motivation section
 MOTIVATIONAL_QUOTES = [
-    "Believe you can and you're halfway there.",
-    "Success is not final, failure is not fatal.",
-    "Dream big and dare to fail.",
-    "Your only limit is your mind.",
-    "Every expert was once a beginner.",
-    "Respect What you have not what other have"
+    
 ]
 
 @application.route('/')
