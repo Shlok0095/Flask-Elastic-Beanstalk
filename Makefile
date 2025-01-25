@@ -10,6 +10,6 @@ test:
 
 deploy:
 	eb use flask-demo-environment
-	eb deploy
+	eb flask-duke-cd-env
 
 all: install lint test
