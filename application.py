@@ -9,7 +9,8 @@ MOTIVATIONAL_QUOTES = [
     "Success is not final, failure is not fatal.",
     "Dream big and dare to fail.",
     "Your only limit is your mind.",
-    "Every expert was once a beginner."
+    "Every expert was once a beginner.",
+    "Respect What you have not what other have"
 ]
 
 @application.route('/')
