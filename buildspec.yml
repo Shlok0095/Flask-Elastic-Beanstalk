@@ -12,7 +12,6 @@ phases:
   build:
     commands:
       - make all
-      - make deploy
   
 artifacts:
   files:
