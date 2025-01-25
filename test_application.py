@@ -8,6 +8,7 @@ def test_home_route():
 
 def test_calculation():
     client = application.test_client()
+    # Test addition
     response = client.post('/calculate', data={
         'num1': '10',
         'num2': '5',
@@ -16,3 +17,13 @@ def test_calculation():
     assert response.status_code == 200
     data = response.get_json()
     assert data['result'] == 15
+
+    # Test division by zero
+    response = client.post('/calculate', data={
+        'num1': '10',
+        'num2': '0',
+        'operation': 'divide'
+    })
+    assert response.status_code == 200
+    data = response.get_json()
+    assert 'error' in data
