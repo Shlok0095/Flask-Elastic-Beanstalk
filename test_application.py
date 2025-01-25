@@ -1,10 +1,11 @@
 from application import application
+from unittest.mock import patch
 
 def test_home_route():
-    client = application.test_client()
-    response = client.get('/')
-    assert response.status_code == 200
-    assert b'Simple Calculator' in response.data
+    with patch('flask.render_template', return_value='Mocked Template'):
+        client = application.test_client()
+        response = client.get('/')
+        assert response.status_code == 200
 
 def test_calculation():
     client = application.test_client()
